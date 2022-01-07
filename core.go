@@ -111,7 +111,6 @@ func WriterHook(filename string, config *FileConf) lumberjack.Logger {
 		MaxBackups: config.MaxBackups, // 日志文件最多保存多少个备份
 		Compress:   config.Compress,   // 是否压缩
 	}
-
 }
 func ReplaceGlobals(logger *zap.Logger, props *Properties) func() {
 	globalMu.Lock()
